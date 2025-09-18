@@ -329,16 +329,16 @@ SELECT idProduto, pnome, valor
 FROM Produto;
 ```
 
-![Resultado da Query](Arquivos/consulta1.jpg)
+![Resultado da Query](Arquivos/query1.jpg)
 
-![Resultado da Query](ttps://github.com/ariadinanascimento-lgtm/SQL_projetologico_bd.git/Arquivos/consulta1.jpg)
+
 ```ruby
 -- Listar todos os clientes (Pessoa Física e Jurídica) com seus e-mails:
 SELECT pnome, sobrenome, email
 FROM Cliente;
 ```
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+
+![Resultado da Query](Arquivos/query2.jpg)
 
 - Filtros com WHERE Statement
   
@@ -349,8 +349,8 @@ FROM Produto
 WHERE categoria = 'Eletrônicos';
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query3.jpg)
+
 
 ```ruby
 -- Listar os pedidos com status 'PROCESSANDO':
@@ -359,8 +359,7 @@ FROM Pedido
 WHERE status = 'PROCESSANDO';
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query4.jpg)
 
 
 ```ruby
@@ -370,8 +369,8 @@ FROM Cliente
 WHERE pnome LIKE 'A%';
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query5.jpg)
+
 
 - Criar expressões para gerar atributos derivados
 
@@ -384,8 +383,7 @@ SELECT
 FROM Pedido;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query6.jpg)
 
 ```ruby
 -- Exibir o nome do produto e a avaliação com uma descrição (ex.: 'Excelente', 'Bom', 'Regular'):
@@ -399,8 +397,8 @@ FROM Pedido;
 FROM Produto;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query7.jpg)
+
 
 - Ordenações dos dados com ORDER BY
 
@@ -411,8 +409,8 @@ FROM Produto
 ORDER BY valor DESC;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query8.jpg)
+
 
 
 ```ruby
@@ -422,8 +420,8 @@ FROM Fornecedor
 ORDER BY razao_social ASC;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query9.jpg)
+
 
 - Condições de filtros aos grupos – HAVING Statemen
 
@@ -440,8 +438,7 @@ GROUP BY
 HAVING
   TotalProdutos > 1;
 ```
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query10.jpg)
 
 
 ```ruby
@@ -457,9 +454,7 @@ GROUP BY
 HAVING
   QuantidadeTotal > 50;
 ```
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
-
+![Resultado da Query](Arquivos/query11.jpg)
 
 
 -  Quantos pedidos foram feitos por cada cliente?
@@ -475,8 +470,7 @@ GROUP BY c.idCliente, Cliente
 ORDER BY Total_Pedidos DESC;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query12.jpg)
 
   
 - Algum vendedor também é fornecedor?
@@ -488,8 +482,7 @@ FROM Fornecedor f
 JOIN TerceiroVendedor tv ON f.cnpj = tv.cnpj;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query13.jpg)
 
 
 - Qual é a relação de produtos fornecedores e estoques;
@@ -511,8 +504,7 @@ LEFT JOIN Estoque e ON ep.estoque_idEstoque = e.idEstoque
 ORDER BY p.pnome, f.razao_social, e.localizacao;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query14.jpg)
 
 
 
@@ -530,5 +522,4 @@ JOIN Produto p ON dp.produto_idProduto = p.idProduto
 ORDER BY f.razao_social, p.pnome;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/query15.jpg)
