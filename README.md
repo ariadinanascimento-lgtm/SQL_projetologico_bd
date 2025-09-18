@@ -39,6 +39,7 @@ Link para download: https://www.mysql.com/products/workbench/
 ![Modelo Lógico ](Arquivos/modelagemlogicaecommerce.png
 )
 
+##
 ### 2. Criação do Schema (DDL) 
 O script a seguir foi utilizado para criar o banco de dados e as tabelas, definindo a estrutura lógica do projeto de e-commerce:
 
@@ -213,6 +214,7 @@ CREATE TABLE FormaDePagamento (
 );
 ```
 
+##
 ### 3. Persistência de Dados (DML)
 
 Este script foi utilizado para inserir dados fictícios ao banco de dados, criando um ambiente para testes e para consultas futuras.
@@ -317,6 +319,7 @@ INSERT INTO RelacaoProdutoPedido (produto_idProduto, pedido_idPedido, quantidade
 (3, 2, 1, 'SOLICITADO');  -- 1x Boneco no pedido 2
 ```
 
+##
 ### 4. Queries SQL de Análise
 
 As seguintes consultas foram desenvolvidas para extrair informações do banco de dados, para  responder a perguntas de negócio e demonstrar a funcionalidade do esquema.
@@ -410,7 +413,6 @@ ORDER BY valor DESC;
 ```
 
 ![Resultado da Query](Arquivos/query8.jpg)
-
 
 
 ```ruby
@@ -523,3 +525,17 @@ ORDER BY f.razao_social, p.pnome;
 ```
 
 ![Resultado da Query](Arquivos/query15.jpg)
+
+##
+
+✨ Esta jornada representou muito estudo, trabalho e dedicação, contribuindo de forma significativa para meu aprendizado em **bancos de dados**.  
+O projeto foi além da simples criação de queries: proporcionou uma compreensão sólida de como um banco de dados é concebido e estruturado desde o zero — conhecimento fundamental para minha formação em **Análise de Dados**.  
+
+Espero que este repositório sirva como um bom exemplo da aplicação prática de **modelagem de dados** e **SQL**.  
+
+🔎 Sinta-se à vontade para explorar os scripts, analisar a estrutura e aproveitar este material como fonte de estudo ou inspiração.  
+
+---
+
+📌 Feito com dedicação 💻  
+👩‍💻 [Ariadina Nascimento](https://www.linkedin.com/in/ariadinaanascimento/) 
