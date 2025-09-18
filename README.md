@@ -329,11 +329,16 @@ SELECT idProduto, pnome, valor
 FROM Produto;
 ```
 
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
 ```ruby
 -- Listar todos os clientes (Pessoa Física e Jurídica) com seus e-mails:
 SELECT pnome, sobrenome, email
 FROM Cliente;
 ```
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
 
 - Filtros com WHERE Statement
   
@@ -344,6 +349,9 @@ FROM Produto
 WHERE categoria = 'Eletrônicos';
 ```
 
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
 ```ruby
 -- Listar os pedidos com status 'PROCESSANDO':
 SELECT idPedido, descricao, cliente_idCliente
@@ -351,12 +359,19 @@ FROM Pedido
 WHERE status = 'PROCESSANDO';
 ```
 
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
+
 ```ruby
 -- Encontrar clientes cujo nome começa com a letra 'A':
 SELECT pnome, sobrenome
 FROM Cliente
 WHERE pnome LIKE 'A%';
 ```
+
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
 
 - Criar expressões para gerar atributos derivados
 
@@ -368,6 +383,9 @@ SELECT
   (frete + 50.00) AS valor_total
 FROM Pedido;
 ```
+
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
 
 ```ruby
 -- Exibir o nome do produto e a avaliação com uma descrição (ex.: 'Excelente', 'Bom', 'Regular'):
@@ -381,6 +399,9 @@ FROM Pedido;
 FROM Produto;
 ```
 
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
 - Ordenações dos dados com ORDER BY
 
 ```ruby
@@ -390,6 +411,9 @@ FROM Produto
 ORDER BY valor DESC;
 ```
 
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
 
 ```ruby
 -- Listar os fornecedores em ordem alfabética pela razão social:
@@ -397,6 +421,9 @@ SELECT razao_social, telefone
 FROM Fornecedor
 ORDER BY razao_social ASC;
 ```
+
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
 
 - Condições de filtros aos grupos – HAVING Statemen
 
@@ -413,6 +440,9 @@ GROUP BY
 HAVING
   TotalProdutos > 1;
 ```
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
 
 ```ruby
 -- Encontrar os estoques que têm um total de produtos maior que 50:
@@ -427,6 +457,9 @@ GROUP BY
 HAVING
   QuantidadeTotal > 50;
 ```
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
 
 
 -  Quantos pedidos foram feitos por cada cliente?
@@ -442,6 +475,9 @@ GROUP BY c.idCliente, Cliente
 ORDER BY Total_Pedidos DESC;
 ```
 
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
   
 - Algum vendedor também é fornecedor?
 
@@ -451,6 +487,9 @@ SELECT f.idFornecedor, f.razao_social AS Fornecedor, f.cnpj AS CNPJ,
 FROM Fornecedor f
 JOIN TerceiroVendedor tv ON f.cnpj = tv.cnpj;
 ```
+
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
 
 
 - Qual é a relação de produtos fornecedores e estoques;
@@ -472,6 +511,11 @@ LEFT JOIN Estoque e ON ep.estoque_idEstoque = e.idEstoque
 ORDER BY p.pnome, f.razao_social, e.localizacao;
 ```
 
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
+
+
+
 - Qual é a relação de nomes dos fornecedores e nomes dos produtos?
 
 ```ruby
@@ -485,3 +529,6 @@ JOIN DisponibilizandoProduto dp ON f.idFornecedor = dp.fornecedor_idFornecedor
 JOIN Produto p ON dp.produto_idProduto = p.idProduto
 ORDER BY f.razao_social, p.pnome;
 ```
+
+![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
+)
