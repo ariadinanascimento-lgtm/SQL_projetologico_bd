@@ -25,7 +25,7 @@ O objetivo deste projeto foi aplicar os conceitos de modelagem lógica de banco 
 - Junções entre Tabelas (JOIN): Combinação de dados de múltiplas tabelas para responder a perguntas mais complexas.
 
 Etapas do Projeto
-1. Construção do Modelo Lógico (Scripts DDL)
+2. Construção do Modelo Lógico (Scripts DDL)
 O script a seguir foi utilizado para criar o banco de dados e as tabelas, definindo a estrutura lógica do projeto de e-commerce:
 
 
@@ -199,8 +199,7 @@ CREATE TABLE FormaDePagamento (
 );
 ```
 
-2. Persistência de Dados (Scripts DML)
-Este script foi utilizado para inserir dados fictícios e popular as tabelas, criando um ambiente de testes para as consultas futuras.
+3. Persistência de Dados (Scripts DML): Este script foi utilizado para inserir dados fictícios e popular as tabelas, criando um ambiente de testes para as consultas futuras.
 
 ```ruby
 -- Inserindo dados na tabela Fornecedor
@@ -302,8 +301,7 @@ INSERT INTO RelacaoProdutoPedido (produto_idProduto, pedido_idPedido, quantidade
 (3, 2, 1, 'SOLICITADO');  -- 1x Boneco no pedido 2
 ```
 
-3. Queries SQL de Análise: As seguintes consultas foram desenvolvidas para extrair informações do banco de dados, respondendo a perguntas de negócio e demonstrando a funcionalidade do esquema.
-
+4. Queries SQL de Análise: As seguintes consultas foram desenvolvidas para extrair informações do banco de dados, respondendo a perguntas de negócio e demonstrando a funcionalidade do esquema.
 
 - Recuperações simples com SELECT
 
@@ -437,7 +435,7 @@ JOIN TerceiroVendedor tv ON f.cnpj = tv.cnpj;
 ```
 
 
--- Qual é a relação de produtos fornecedores e estoques;
+- Qual é a relação de produtos fornecedores e estoques;
 ```ruby
 SELECT 
   p.idProduto,
@@ -456,7 +454,7 @@ LEFT JOIN Estoque e ON ep.estoque_idEstoque = e.idEstoque
 ORDER BY p.pnome, f.razao_social, e.localizacao;
 ```
 
--- Qual é a relação de nomes dos fornecedores e nomes dos produtos?
+- Qual é a relação de nomes dos fornecedores e nomes dos produtos?
 
 ```ruby
 SELECT 
