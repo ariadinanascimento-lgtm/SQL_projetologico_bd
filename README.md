@@ -36,7 +36,7 @@ Link para download: https://www.mysql.com/products/workbench/
 ## 📊 ETAPAS DO PROJETO
 
 ### 1. Modelo Lógica
-![Modelo Lógico ](Imagens/modeleagem_conceitual_bd_oficina.png
+![Modelo Lógico ](Arquivos/modelagemlogicaecommerce.png
 )
 
 ### 2. Criação do Schema (DDL) 
@@ -329,9 +329,9 @@ SELECT idProduto, pnome, valor
 FROM Produto;
 ```
 
-![Resultado](Imagens/modeleagem_conceitual_bd_oficina.png
-)
+![Resultado da Query](Arquivos/consulta1.jpg)
 
+![Resultado da Query](ttps://github.com/ariadinanascimento-lgtm/SQL_projetologico_bd.git/Arquivos/consulta1.jpg)
 ```ruby
 -- Listar todos os clientes (Pessoa Física e Jurídica) com seus e-mails:
 SELECT pnome, sobrenome, email
